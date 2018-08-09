@@ -362,6 +362,7 @@ public class MainActivity extends AppCompatActivity implements
          */
         if (PREFERENCES_HAVE_BEEN_UPDATED) {
             Log.d(TAG, "onStart: preferences were updated");
+            invalidateData();
             getSupportLoaderManager().restartLoader(FORECAST_LOADER_ID, null, this);
             PREFERENCES_HAVE_BEEN_UPDATED = false;
         }
